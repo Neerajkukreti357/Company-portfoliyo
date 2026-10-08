@@ -1,7 +1,7 @@
-import umia1 from "../assets/images/umia/shree Umia 1.jpeg"
-import krishna1 from "../assets/images/shriKrishna/krishna1.jpeg"
-import annpurna1 from "../assets/images/annapurna/annapurna1.jpeg"
-import terra1 from "../assets/images/teera/terra1.jpeg"
+import umia1 from "../public/images/umia/shree Umia 1.jpeg"
+import krishna1 from "../public/images/shriKrishna/krishna1.jpeg"
+import annpurna1 from "../public/images/annapurna/annapurna1.jpeg"
+import terra1 from "../public/images/teera/terra1.jpeg"
 
 const appImages = {
     umia1,
