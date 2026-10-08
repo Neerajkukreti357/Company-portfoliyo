@@ -5,6 +5,7 @@ import { projects, reviews } from "@/data/site";
 import { ui } from "@/data/ui";
 import { Carousel } from "react-responsive-carousel";
 import { useEffect, useState } from "react";
+import { truncateText } from "@/utils/globalFunction";
 
 export default function Reviews() {
   const { t } = useLang();
@@ -73,7 +74,7 @@ useEffect(() => {
         key={r.id}
         className="mx-2 flex flex-col border-l-4 border-teal bg-white p-7 shadow-sm ring-1 ring-ink/10"
       >
-        <div className="flex gap-1">
+        <div className="flex gap-1 justify-center">
           {[1, 2, 3, 4, 5].map((n) => (
             <Star
               key={n}
@@ -88,7 +89,7 @@ useEffect(() => {
         </div>
 
         <blockquote className="mt-4 flex-1 text-lg leading-relaxed">
-          {t(r.text)}
+          {truncateText(t(r.text),100)}
         </blockquote>
 
         <figcaption className="mt-5 border-t border-ink/10 pt-4">
@@ -100,7 +101,7 @@ useEffect(() => {
 
           {project && (
             <p className="mt-1 text-sm font-medium text-teal">
-              {t(ui.reviews.project)} {t(project.title)}
+              {t(ui.reviews.project)}  {truncateText(t(project.title),30)}
             </p>
           )}
         </figcaption>

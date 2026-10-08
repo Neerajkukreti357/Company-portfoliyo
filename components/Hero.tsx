@@ -22,7 +22,7 @@ export default function Hero() {
   const s = slides[i];
 
   return (
-    <section className="relative isolate h-[calc(100svh-4rem)] min-h-150 overflow-hidden bg-ink text-white">
+    <section className="relative isolate h-[calc(100svh-4rem)] min-h-150 overflow-hidden bg-ink text-white max-[350px]:h-auto min-[432px]:min-h-[calc(100svh-4rem)]">
       <AnimatePresence>
         <motion.div
           key={s.id}
@@ -40,14 +40,20 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10 bg-linear-to-r from-ink/90 via-ink/60 to-ink/10" />
       <div className="blueprint absolute inset-0 -z-10 opacity-60" />
 
-      <div className="mx-auto flex h-full max-w-7xl flex-col justify-center gap-10 px-5 lg:flex-row lg:items-center lg:justify-between lg:pb-20">
+      <div className="mx-auto flex h-full max-w-7xl flex-col justify-center gap-10 px-5 lg:flex-row lg:items-center lg:justify-between lg:pb-20 max-[350px]:h-auto max-[350px]:justify-start max-[350px]:gap-8 max-[350px]:py-10">
         <div className="max-w-2xl lg:pb-4">
-          <h1 className="hero-h1 font-display text-5xl font-extrabold leading-[0.95] sm:text-7xl">{t(ui.hero.title)}</h1>
+          <h1 className="hero-h1 font-display text-5xl font-extrabold leading-[0.95] sm:text-7xl">
+            {t(ui.hero.title)}
+          </h1>
           <p className="mt-5 max-w-xl text-lg text-white/80">
-            {t(site.tagline)} {t(ui.hero.years).replace("{n}", String(site.yearsExperience))}
+            {t(site.tagline)}{" "}
+            {t(ui.hero.years).replace("{n}", String(site.yearsExperience))}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/gallery" className="rounded bg-amber px-6 py-3 font-semibold text-ink hover:brightness-110">
+            <Link
+              href="/gallery"
+              className="rounded bg-amber px-6 py-3 font-semibold text-ink hover:brightness-110"
+            >
               {t(ui.hero.seeProjects)}
             </Link>
             <a
@@ -70,12 +76,19 @@ export default function Hero() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.4 }}
             >
-              <p className="text-sm font-medium text-slate">{t(ui.hero.builtByUs)}</p>
-              <h2 className="font-display text-3xl font-extrabold leading-none">{t(s.title)}</h2>
+              <p className="text-sm font-medium text-slate">
+                {t(ui.hero.builtByUs)}
+              </p>
+              <h2 className="font-display text-3xl font-extrabold leading-none">
+                {t(s.title)}
+              </h2>
               <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-sm">
-                <dt className="text-slate">{t(ui.hero.location)}</dt><dd className="font-medium">{t(s.location)}</dd>
-                <dt className="text-slate">{t(ui.hero.capacity)}</dt><dd className="font-medium">{t(s.capacity)}</dd>
-                <dt className="text-slate">{t(ui.hero.year)}</dt><dd className="font-medium">{s.year}</dd>
+                <dt className="text-slate">{t(ui.hero.location)}</dt>
+                <dd className="font-medium">{t(s.location)}</dd>
+                <dt className="text-slate">{t(ui.hero.capacity)}</dt>
+                <dd className="font-medium">{t(s.capacity)}</dd>
+                <dt className="text-slate">{t(ui.hero.year)}</dt>
+                <dd className="font-medium">{s.year}</dd>
               </dl>
             </motion.div>
           </AnimatePresence>

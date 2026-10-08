@@ -46,3 +46,9 @@ export const generateVideoThumbnail = (
     };
   });
 };
+
+export const truncateText = (text: string, maxLength = 400) => {
+  if (text.length <= maxLength) return text;
+
+  return text.slice(0, maxLength).trimEnd() + "...";
+};

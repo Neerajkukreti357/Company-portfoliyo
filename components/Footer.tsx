@@ -45,7 +45,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-2 text-white/80">
             <li><Link href="/gallery" className="hover:text-white">{t(ui.nav.projects)}</Link></li>
             <li><Link href="/videos" className="hover:text-white">{t(ui.nav.videos)}</Link></li>
-            <li><Link href="/contact" className="hover:text-white">{t(ui.nav.contact)}</Link></li>
+            <li><Link href="/aboutUs" className="hover:text-white">{t(ui.nav.contact)}</Link></li>
           </ul>
         </div>
 

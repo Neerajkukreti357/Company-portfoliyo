@@ -49,7 +49,7 @@ export default function HomeContent() {
       <section className="mx-auto max-w-4xl px-5 py-20 text-center">
         <h2 className="font-display text-5xl font-extrabold">{t(ui.home.ctaTitle)}</h2>
         <p className="mx-auto mt-3 max-w-xl text-slate">{t(ui.home.ctaSub)}</p>
-        <Link href="/contact" className="mt-7 inline-block rounded bg-amber px-8 py-3.5 font-semibold text-ink hover:brightness-110">
+        <Link href="/aboutUs" className="mt-7 inline-block rounded bg-amber px-8 py-3.5 font-semibold text-ink hover:brightness-110">
           {t(ui.home.talk)}
         </Link>
       </section>

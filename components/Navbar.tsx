@@ -20,7 +20,7 @@ const links = [
   { href: "/", label: ui.nav.home },
   { href: "/gallery", label: ui.nav.projects },
   { href: "/videos", label: ui.nav.videos },
-  { href: "/contact", label: ui.nav.contact },
+  { href: "/aboutUs", label: ui.nav.contact },
 ];
 
 export default function Navbar() {
@@ -70,7 +70,7 @@ export default function Navbar() {
           <LangToggle />
 
           <Link
-            href="/contact"
+            href="/aboutUs"
             className="hidden rounded bg-amber px-4 py-2 text-sm font-semibold text-ink hover:brightness-110 md:block"
           >
             {t(ui.nav.quote)}

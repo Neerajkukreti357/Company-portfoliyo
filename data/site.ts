@@ -1,6 +1,5 @@
 import appImages from "@/constants/imageConstants";
 import type { L } from "@/lib/i18n";
-import { StaticImageData } from "next/image";
 
 // ✏️ Edit company details, projects, videos and reviews here (English and Hindi side by side).
 
@@ -11,8 +10,8 @@ export const site = {
   } as L,
   short: { en: "FertiCraft", hi: "फर्टीक्राफ्ट" } as L,
   tagline: {
-    en: "We design, fabricate and commission chemical storage and process plants.",
-    hi: "हम केमिकल स्टोरेज टैंक और प्रोसेस प्लांट का डिज़ाइन, निर्माण और कमीशनिंग करते हैं।",
+    en: "I design, fabricate and commission chemical storage and process plants.",
+    hi: "मैं केमिकल स्टोरेज टैंक और प्रोसेस प्लांट का डिज़ाइन, निर्माण और कमीशनिंग करता हूँ।",
   } as L,
   phone: "+91 96274209273",
   whatsapp: "9196274209273", // country code + number, no + or spaces
@@ -24,7 +23,7 @@ export const site = {
     en: "Mon to Sat, 9:00 am to 6:00 pm",
     hi: "सोमवार से शनिवार, सुबह 9:00 से शाम 6:00 बजे तक",
   } as L,
-  yearsExperience: 18,
+  yearsExperience: 8,
 };
 
 export const services: L[] = [
@@ -77,8 +76,8 @@ export const projects: Project[] = [
   {
     id: 2,
     title: {
-      en: "Phosphorus Sulphate Plant – Industrial & Fertilizer Grade",
-      hi: "फॉस्फोरस सल्फेट प्लांट – औद्योगिक एवं उर्वरक ग्रेड",
+      en: "Ferrous Sulphate Plant – Industrial & Fertilizer Grade",
+      hi: "फेरस सल्फेट प्लांट – औद्योगिक एवं उर्वरक ग्रेड",
     },
     category: "plants",
     location: {
@@ -99,8 +98,8 @@ export const projects: Project[] = [
   {
     id: 3,
     title: {
-      en: "Magnesium Sulphate & Phosphorus Sulphate Fertilizer Grade Plant",
-      hi: "मैग्नीशियम सल्फेट एवं फॉस्फोरस सल्फेट उर्वरक ग्रेड प्लांट",
+      en: "Magnesium Sulphate & Ferrous Sulphate Fertilizer Grade Plant",
+      hi: "मैग्नीशियम सल्फेट एवं फेरस सल्फेट उर्वरक ग्रेड प्लांट",
     },
     category: "plants",
     location: {
@@ -119,27 +118,27 @@ export const projects: Project[] = [
     },
   },
   {
-  id: 4,
-  title: {
-    en: "Magnesium Sulphate – Textile Grade Plant",
-    hi: "मैग्नीशियम सल्फेट – टेक्सटाइल ग्रेड प्लांट",
+    id: 4,
+    title: {
+      en: "Magnesium Sulphate – Textile Grade Plant",
+      hi: "मैग्नीशियम सल्फेट – टेक्सटाइल ग्रेड प्लांट",
+    },
+    category: "plants",
+    location: {
+      en: "Panipat, Haryana",
+      hi: "पानीपत, हरियाणा",
+    },
+    year: 2026,
+    capacity: {
+      en: "600 MT/month",
+      hi: "600 मीट्रिक टन/माह",
+    },
+    image: appImages.terra1,
+    summary: {
+      en: "Complete end-to-end plant execution by our team, covering infrastructure development, equipment and tank installation, process piping, electrical and instrumentation work, utility integration, plant commissioning, and production readiness.",
+      hi: "हमारी टीम द्वारा किया गया संपूर्ण एंड-टू-एंड प्लांट कार्य, जिसमें इंफ्रास्ट्रक्चर विकास, उपकरण एवं टैंक इंस्टॉलेशन, प्रोसेस पाइपिंग, इलेक्ट्रिकल एवं इंस्ट्रूमेंटेशन कार्य, यूटिलिटी इंटीग्रेशन, प्लांट कमीशनिंग तथा उत्पादन हेतु तैयारी शामिल है।",
+    },
   },
-  category: "plants",
-  location: {
-    en: "Panipat, Haryana",
-    hi: "पानीपत, हरियाणा",
-  },
-  year: 2026,
-  capacity: {
-    en: "600 MT/month",
-    hi: "600 मीट्रिक टन/माह",
-  },
-  image: appImages.terra1,
-  summary: {
-    en: "Complete end-to-end plant execution by our team, covering infrastructure development, equipment and tank installation, process piping, electrical and instrumentation work, utility integration, plant commissioning, and production readiness.",
-    hi: "हमारी टीम द्वारा किया गया संपूर्ण एंड-टू-एंड प्लांट कार्य, जिसमें इंफ्रास्ट्रक्चर विकास, उपकरण एवं टैंक इंस्टॉलेशन, प्रोसेस पाइपिंग, इलेक्ट्रिकल एवं इंस्ट्रूमेंटेशन कार्य, यूटिलिटी इंटीग्रेशन, प्लांट कमीशनिंग तथा उत्पादन हेतु तैयारी शामिल है।",
-  },
-},
 ];
 
 export type Video = {
@@ -173,8 +172,8 @@ export const videos: Video[] = [
   {
     id: 2,
     title: {
-      en: "Phosphorus Sulphate Plant – Industrial & Fertilizer Grade",
-      hi: "फॉस्फोरस सल्फेट प्लांट – औद्योगिक एवं उर्वरक ग्रेड",
+      en: "Ferrous Sulphate Plant – Industrial & Fertilizer Grade",
+      hi: "फेरस सल्फेट प्लांट – औद्योगिक एवं उर्वरक ग्रेड",
     },
     location: {
       en: "Modinagar, Ghaziabad",
@@ -187,8 +186,8 @@ export const videos: Video[] = [
   {
     id: 3,
     title: {
-      en: "Magnesium Sulphate & Phosphorus Sulphate Fertilizer Grade Plant",
-      hi: "मैग्नीशियम सल्फेट एवं फॉस्फोरस सल्फेट उर्वरक ग्रेड प्लांट",
+      en: "Magnesium Sulphate & Ferrous Sulphate Fertilizer Grade Plant",
+      hi: "मैग्नीशियम सल्फेट एवं फेरस सल्फेट उर्वरक ग्रेड प्लांट",
     },
     location: {
       en: "Sirsa, Haryana",
@@ -201,8 +200,8 @@ export const videos: Video[] = [
   {
     id: 4,
     title: {
-      en: "Magnesium Sulphate & Phosphorus Sulphate Fertilizer Grade Plant",
-      hi: "मैग्नीशियम सल्फेट एवं फॉस्फोरस सल्फेट उर्वरक ग्रेड प्लांट",
+      en: "Magnesium Sulphate & Ferrous Sulphate Fertilizer Grade Plant",
+      hi: "मैग्नीशियम सल्फेट एवं फेरस सल्फेट उर्वरक ग्रेड प्लांट",
     },
     location: {
       en: "Sirsa, Haryana",
@@ -234,8 +233,8 @@ export const reviews: Review[] = [
     rating: 5,
     projectId: 1,
     text: {
-      en: "The tanks were handed over a week before the date we agreed. Welding quality passed our third-party inspection on the first attempt.",
-      hi: "टैंक तय तारीख से एक हफ़्ता पहले ही सौंप दिए गए। वेल्डिंग की गुणवत्ता पहली ही बार में हमारे थर्ड-पार्टी निरीक्षण में पास हो गई।",
+      en: "I handed over the tanks a week before the agreed date. The welding quality passed the third-party inspection on the first attempt.",
+      hi: "मैंने तय तारीख से एक सप्ताह पहले ही टैंक सौंप दिए। वेल्डिंग की गुणवत्ता पहली ही बार में थर्ड-पार्टी निरीक्षण में पास हो गई।",
     },
   },
   {
@@ -260,7 +259,7 @@ export const reviews: Review[] = [
       hi: "प्रोजेक्ट्स मैनेजर, ग्रीनफ्लो इंडस्ट्रीज़",
     },
     rating: 4,
-    projectId: 4,
+    projectId: 3,
     text: {
       en: "Good site discipline and clear communication. A few small punch-list items took time to close, but the team came back and finished them.",
       hi: "साइट पर अच्छा अनुशासन और साफ़ संवाद। कुछ छोटे बाकी कामों को पूरा करने में समय लगा, लेकिन टीम वापस आई और उन्हें पूरा किया।",
@@ -271,10 +270,10 @@ export const reviews: Review[] = [
     name: { en: "Harpreet Gill", hi: "हरप्रीत गिल" },
     company: { en: "Owner, Gill Pharma Works", hi: "मालिक, गिल फार्मा वर्क्स" },
     rating: 5,
-    projectId: 6,
+    projectId: 4,
     text: {
-      en: "Fair pricing and honest advice. They told us which parts of the budget we could cut safely instead of just selling us more.",
-      hi: "उचित दाम और ईमानदार सलाह। उन्होंने बताया कि बजट में कहाँ सुरक्षित रूप से कटौती हो सकती है, हमें बस ज़्यादा बेचने की कोशिश नहीं की।",
+      en: "Fair pricing and honest advice. I tell my clients which parts of the budget can be reduced safely instead of simply trying to sell them more.",
+      hi: "उचित दाम और ईमानदार सलाह। मैं अपने ग्राहकों को बताता हूँ कि बजट में किन हिस्सों में सुरक्षित रूप से कटौती की जा सकती है, बजाय इसके कि उन्हें केवल अधिक चीज़ें बेचने की कोशिश करूँ।",
     },
   },
 ];
