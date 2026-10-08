@@ -52,7 +52,7 @@ export type Project = {
   location: L;
   year: number;
   capacity: L;
-  image: StaticImageData;
+  image: string;
   summary: L;
 };
 
