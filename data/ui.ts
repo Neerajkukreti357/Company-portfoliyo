@@ -21,7 +21,7 @@ export const ui = {
 
     years: {
       en: "{n} years of experience across Punjab, Haryana, and Gujarat.",
-      hi: "पंजाब, हरियाणा, हिमाचल और गुजरात में {n} वर्षों का अनुभव।",
+      hi: "पंजाब, हरियाणा, और गुजरात में {n} वर्षों का अनुभव।",
     } as L,
 
     seeProjects: { en: "See my projects", hi: "मेरे प्रोजेक्ट देखें" } as L,
