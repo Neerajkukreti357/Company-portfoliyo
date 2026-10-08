@@ -11,9 +11,9 @@ export default function ContactContent() {
   const { t } = useLang();
 
   return (
-    <section className="mx-auto grid max-w-7xl gap-12 px-5 py-16 lg:grid-cols-2">
+    <section className="mx-auto max-w-7xl gap-12 px-5 py-16">
       <div>
-        <h1 className="font-display text-6xl font-extrabold">
+        <h1 className="font-display text-6xl font-extrabold text-center">
           {t(ui.about.title)}
         </h1>
 

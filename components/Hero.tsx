@@ -22,7 +22,7 @@ export default function Hero() {
   const s = slides[i];
 
   return (
-    <section className="relative isolate h-[calc(100svh-4rem)] min-h-150 overflow-hidden bg-ink text-white max-[350px]:h-auto min-[432px]:min-h-[calc(100svh-4rem)]">
+    <section className="relative isolate h-[calc(100svh-4rem)] min-h-220 overflow-hidden bg-ink text-white max-[350px]:h-auto min-[432px]:min-h-[calc(100svh-4rem)]">
       <AnimatePresence>
         <motion.div
           key={s.id}
