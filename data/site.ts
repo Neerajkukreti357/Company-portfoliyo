@@ -1,19 +1,24 @@
+import appImages from "@/constants/imageConstants";
 import type { L } from "@/lib/i18n";
+import { StaticImageData } from "next/image";
 
 // ✏️ Edit company details, projects, videos and reviews here (English and Hindi side by side).
 
 export const site = {
-  name: { en: "Apex Process Engineering", hi: "एपेक्स प्रोसेस इंजीनियरिंग" } as L,
-  short: { en: "Apex", hi: "एपेक्स" } as L,
+  name: {
+    en: "FertiCraft FabTech",
+    hi: "फर्टीक्राफ्ट फैबटेक",
+  } as L,
+  short: { en: "FertiCraft", hi: "फर्टीक्राफ्ट" } as L,
   tagline: {
     en: "We design, fabricate and commission chemical storage and process plants.",
     hi: "हम केमिकल स्टोरेज टैंक और प्रोसेस प्लांट का डिज़ाइन, निर्माण और कमीशनिंग करते हैं।",
   } as L,
-  phone: "+91 98765 43210",
-  whatsapp: "919876543210", // country code + number, no + or spaces
+  phone: "+91 96274209273",
+  whatsapp: "9196274209273", // country code + number, no + or spaces
   address: {
-    en: "Plot 24, Industrial Area Phase II, Ludhiana, Punjab 141010",
-    hi: "प्लॉट 24, इंडस्ट्रियल एरिया फेज़ II, लुधियाना, पंजाब 141010",
+    en: "House No. 105, Prateet Nagar, Raiwala, Dehradun, 249205",
+    hi: "हाउस नंबर 105, प्रतीत नगर, रायवाला, देहरादून, 249205",
   } as L,
   hours: {
     en: "Mon to Sat, 9:00 am to 6:00 pm",
@@ -47,7 +52,7 @@ export type Project = {
   location: L;
   year: number;
   capacity: L;
-  image: string;
+  image: StaticImageData;
   summary: L;
 };
 
@@ -55,88 +60,98 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: 1,
-    title: { en: "Acid Storage Tank Farm", hi: "एसिड स्टोरेज टैंक फार्म" },
-    category: "tanks",
-    location: { en: "Panipat, Haryana", hi: "पानीपत, हरियाणा" },
-    year: 2024,
-    capacity: { en: "6 tanks, 250 KL each", hi: "6 टैंक, प्रत्येक 250 KL" },
-    image: "/projects/project-1.jpg",
+    title: {
+      en: "Magnesium Sulfate Plant – Agricultural & Industrial Grade",
+      hi: "मैग्नीशियम सल्फेट प्लांट – कृषि एवं औद्योगिक ग्रेड",
+    },
+    category: "plants",
+    location: { en: "Gandhinagar ,Gujrat", hi: "गांधीनगर, गुजरात" },
+    year: 2026,
+    capacity: { en: "600 mt/month", hi: "600 मीट्रिक टन/माह" },
+    image: appImages.umia1,
     summary: {
-      en: "Rubber-lined MS tanks with a full containment bund, transfer piping and loading bay.",
-      hi: "पूरे कंटेनमेंट बंड, ट्रांसफर पाइपिंग और लोडिंग बे के साथ रबर-लाइंड MS टैंक।",
+      en: "Infrastructure designed for efficient plant integration, including MS tank installation, full containment bunds, transfer piping, loading bay, and trial production facilities.",
+      hi: "कुशल प्लांट इंटीग्रेशन के लिए डिज़ाइन किया गया इंफ्रास्ट्रक्चर, जिसमें MS टैंक इंस्टॉलेशन, पूर्ण कंटेनमेंट बंड, ट्रांसफर पाइपिंग, लोडिंग बे और ट्रायल प्रोडक्शन सुविधाएँ शामिल हैं।",
     },
   },
   {
     id: 2,
-    title: { en: "Solvent Recovery Plant", hi: "सॉल्वेंट रिकवरी प्लांट" },
+    title: {
+      en: "Phosphorus Sulphate Plant – Industrial & Fertilizer Grade",
+      hi: "फॉस्फोरस सल्फेट प्लांट – औद्योगिक एवं उर्वरक ग्रेड",
+    },
     category: "plants",
-    location: { en: "Baddi, Himachal Pradesh", hi: "बद्दी, हिमाचल प्रदेश" },
-    year: 2023,
-    capacity: { en: "12 KLPD", hi: "12 KLPD" },
-    image: "/projects/project-2.jpg",
+    location: {
+      en: "Modinagar, Ghaziabad",
+      hi: "मोदीनगर, गाजियाबाद",
+    },
+    year: 2026,
+    capacity: {
+      en: "360 MT/month",
+      hi: "360 मीट्रिक टन/माह",
+    },
+    image: appImages.krishna1,
     summary: {
-      en: "Turnkey distillation and recovery unit, from civil foundations to commissioning.",
-      hi: "सिविल फाउंडेशन से कमीशनिंग तक, टर्नकी डिस्टिलेशन और रिकवरी यूनिट।",
+      en: "Complete plant development covering infrastructure design, tank design and installation, rubber lining, acid-proof brick lining, and end-to-end plant integration through to production.",
+      hi: "इंफ्रास्ट्रक्चर डिज़ाइन, टैंक डिज़ाइन एवं इंस्टॉलेशन, रबर लाइनिंग, एसिड-प्रूफ ईंट लाइनिंग तथा संपूर्ण प्लांट इंटीग्रेशन से लेकर उत्पादन तक का पूर्ण प्लांट विकास कार्य।",
     },
   },
   {
     id: 3,
-    title: { en: "Reactor Block Structure", hi: "रिएक्टर ब्लॉक स्ट्रक्चर" },
-    category: "structural",
-    location: { en: "Ankleshwar, Gujarat", hi: "अंकलेश्वर, गुजरात" },
-    year: 2023,
-    capacity: { en: "4 floors, 380 MT steel", hi: "4 मंज़िल, 380 MT स्टील" },
-    image: "/projects/project-3.jpg",
-    summary: {
-      en: "Structural steel and SS piping for a multi-floor reactor building.",
-      hi: "बहुमंज़िला रिएक्टर बिल्डिंग के लिए स्ट्रक्चरल स्टील और SS पाइपिंग।",
+    title: {
+      en: "Magnesium Sulphate & Phosphorus Sulphate Fertilizer Grade Plant",
+      hi: "मैग्नीशियम सल्फेट एवं फॉस्फोरस सल्फेट उर्वरक ग्रेड प्लांट",
     },
-  },
-  {
-    id: 4,
-    title: { en: "Effluent Treatment Plant", hi: "एफ्लुएंट ट्रीटमेंट प्लांट" },
-    category: "effluent",
-    location: { en: "Mohali, Punjab", hi: "मोहाली, पंजाब" },
-    year: 2022,
-    capacity: { en: "500 KLD", hi: "500 KLD" },
-    image: "/projects/project-4.jpg",
-    summary: {
-      en: "Primary, secondary and tertiary treatment with automated dosing.",
-      hi: "ऑटोमेटेड डोज़िंग के साथ प्राइमरी, सेकेंडरी और टर्शियरी ट्रीटमेंट।",
-    },
-  },
-  {
-    id: 5,
-    title: { en: "Caustic Soda Storage", hi: "कॉस्टिक सोडा स्टोरेज" },
-    category: "tanks",
-    location: { en: "Rudrapur, Uttarakhand", hi: "रुद्रपुर, उत्तराखंड" },
-    year: 2022,
-    capacity: { en: "3 tanks, 100 KL each", hi: "3 टैंक, प्रत्येक 100 KL" },
-    image: "/projects/project-5.jpg",
-    summary: {
-      en: "Heated and insulated tanks with level instrumentation and a transfer skid.",
-      hi: "लेवल इंस्ट्रूमेंटेशन और ट्रांसफर स्किड के साथ हीटेड और इंसुलेटेड टैंक।",
-    },
-  },
-  {
-    id: 6,
-    title: { en: "Pharma Utility Block", hi: "फार्मा यूटिलिटी ब्लॉक" },
     category: "plants",
-    location: { en: "Nalagarh, Himachal Pradesh", hi: "नालागढ़, हिमाचल प्रदेश" },
-    year: 2021,
-    capacity: { en: "Steam, chilled water, N2", hi: "स्टीम, चिल्ड वॉटर, N2" },
-    image: "/projects/project-6.jpg",
+    location: {
+      en: "Sirsa, Haryana",
+      hi: "सिरसा, हरियाणा",
+    },
+    year: 2025,
+    capacity: {
+      en: "900 MT/month",
+      hi: "900 मीट्रिक टन/माह",
+    },
+    image: appImages.annpurna1,
     summary: {
-      en: "Complete utility piping, skids and supports for a bulk drug facility.",
-      hi: "बल्क ड्रग फैसिलिटी के लिए पूरी यूटिलिटी पाइपिंग, स्किड और सपोर्ट।",
+      en: "End-to-end plant development executed by our team, covering infrastructure planning and design, tank design and installation, rubber lining, acid-proof brick lining, complete plant integration, and commissioning for production.",
+      hi: "हमारी टीम द्वारा किया गया संपूर्ण प्लांट विकास कार्य, जिसमें इंफ्रास्ट्रक्चर प्लानिंग एवं डिज़ाइन, टैंक डिज़ाइन एवं इंस्टॉलेशन, रबर लाइनिंग, एसिड-प्रूफ ईंट लाइनिंग, संपूर्ण प्लांट इंटीग्रेशन तथा उत्पादन हेतु कमीशनिंग शामिल है।",
     },
   },
+  {
+  id: 4,
+  title: {
+    en: "Magnesium Sulphate – Textile Grade Plant",
+    hi: "मैग्नीशियम सल्फेट – टेक्सटाइल ग्रेड प्लांट",
+  },
+  category: "plants",
+  location: {
+    en: "Panipat, Haryana",
+    hi: "पानीपत, हरियाणा",
+  },
+  year: 2026,
+  capacity: {
+    en: "600 MT/month",
+    hi: "600 मीट्रिक टन/माह",
+  },
+  image: appImages.terra1,
+  summary: {
+    en: "Complete end-to-end plant execution by our team, covering infrastructure development, equipment and tank installation, process piping, electrical and instrumentation work, utility integration, plant commissioning, and production readiness.",
+    hi: "हमारी टीम द्वारा किया गया संपूर्ण एंड-टू-एंड प्लांट कार्य, जिसमें इंफ्रास्ट्रक्चर विकास, उपकरण एवं टैंक इंस्टॉलेशन, प्रोसेस पाइपिंग, इलेक्ट्रिकल एवं इंस्ट्रूमेंटेशन कार्य, यूटिलिटी इंटीग्रेशन, प्लांट कमीशनिंग तथा उत्पादन हेतु तैयारी शामिल है।",
+  },
+},
 ];
 
 export type Video = {
   id: number;
-  title: L;
-  location: L;
+  title: {
+    en: string;
+    hi: string;
+  };
+  location: {
+    en: string;
+    hi: string;
+  };
   duration: string;
   thumb: string;
   src: string;
@@ -146,27 +161,56 @@ export type Video = {
 export const videos: Video[] = [
   {
     id: 1,
-    title: { en: "Tank farm erection, start to finish", hi: "टैंक फार्म का निर्माण, शुरू से अंत तक" },
-    location: { en: "Panipat, Haryana", hi: "पानीपत, हरियाणा" },
-    duration: "2:40",
-    thumb: "/projects/project-1.jpg",
-    src: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    title: {
+      en: "Complete Plant Integration and Commissioning",
+      hi: "संपूर्ण प्लांट इंटीग्रेशन एवं कमीशनिंग",
+    },
+    location: { en: "Gandhinagar ,Gujrat", hi: "गांधीनगर, गुजरात" },
+    duration: "1:49",
+    thumb: "",
+    src: "/videos/umia/umia2.mp4",
   },
   {
     id: 2,
-    title: { en: "Solvent plant commissioning", hi: "सॉल्वेंट प्लांट की कमीशनिंग" },
-    location: { en: "Baddi, Himachal Pradesh", hi: "बद्दी, हिमाचल प्रदेश" },
-    duration: "3:15",
-    thumb: "/projects/project-2.jpg",
-    src: "/videos/solvent-plant.mp4",
+    title: {
+      en: "Phosphorus Sulphate Plant – Industrial & Fertilizer Grade",
+      hi: "फॉस्फोरस सल्फेट प्लांट – औद्योगिक एवं उर्वरक ग्रेड",
+    },
+    location: {
+      en: "Modinagar, Ghaziabad",
+      hi: "मोदीनगर, गाजियाबाद",
+    },
+    duration: "0.46",
+    thumb: "",
+    src: "/videos/krishna/krishna1.mp4",
   },
   {
     id: 3,
-    title: { en: "Walkthrough of our fabrication yard", hi: "हमारे फैब्रिकेशन यार्ड का दौरा" },
-    location: { en: "Ludhiana, Punjab", hi: "लुधियाना, पंजाब" },
-    duration: "1:50",
-    thumb: "/projects/project-3.jpg",
-    src: "/videos/fabrication-yard.mp4",
+    title: {
+      en: "Magnesium Sulphate & Phosphorus Sulphate Fertilizer Grade Plant",
+      hi: "मैग्नीशियम सल्फेट एवं फॉस्फोरस सल्फेट उर्वरक ग्रेड प्लांट",
+    },
+    location: {
+      en: "Sirsa, Haryana",
+      hi: "सिरसा, हरियाणा",
+    },
+    duration: "3:26",
+    thumb: "",
+    src: "/videos/annapurna/annapurna1.mp4",
+  },
+  {
+    id: 4,
+    title: {
+      en: "Magnesium Sulphate & Phosphorus Sulphate Fertilizer Grade Plant",
+      hi: "मैग्नीशियम सल्फेट एवं फॉस्फोरस सल्फेट उर्वरक ग्रेड प्लांट",
+    },
+    location: {
+      en: "Sirsa, Haryana",
+      hi: "सिरसा, हरियाणा",
+    },
+    duration: "0:18",
+    thumb: "",
+    src: "/videos/terra/terra1.mp4",
   },
 ];
 
@@ -183,7 +227,10 @@ export const reviews: Review[] = [
   {
     id: 1,
     name: { en: "Rajinder Singh", hi: "राजिंदर सिंह" },
-    company: { en: "Managing Director, Northern Chemicals", hi: "मैनेजिंग डायरेक्टर, नॉर्दर्न केमिकल्स" },
+    company: {
+      en: "Managing Director, Northern Chemicals",
+      hi: "मैनेजिंग डायरेक्टर, नॉर्दर्न केमिकल्स",
+    },
     rating: 5,
     projectId: 1,
     text: {
@@ -194,7 +241,10 @@ export const reviews: Review[] = [
   {
     id: 2,
     name: { en: "Anil Verma", hi: "अनिल वर्मा" },
-    company: { en: "Plant Head, Himalaya Solvents", hi: "प्लांट हेड, हिमालया सॉल्वेंट्स" },
+    company: {
+      en: "Plant Head, Himalaya Solvents",
+      hi: "प्लांट हेड, हिमालया सॉल्वेंट्स",
+    },
     rating: 5,
     projectId: 2,
     text: {
@@ -205,7 +255,10 @@ export const reviews: Review[] = [
   {
     id: 3,
     name: { en: "Meena Kapoor", hi: "मीना कपूर" },
-    company: { en: "Projects Manager, GreenFlow Industries", hi: "प्रोजेक्ट्स मैनेजर, ग्रीनफ्लो इंडस्ट्रीज़" },
+    company: {
+      en: "Projects Manager, GreenFlow Industries",
+      hi: "प्रोजेक्ट्स मैनेजर, ग्रीनफ्लो इंडस्ट्रीज़",
+    },
     rating: 4,
     projectId: 4,
     text: {

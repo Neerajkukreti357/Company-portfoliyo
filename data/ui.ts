@@ -93,6 +93,19 @@ export const ui = {
     hello: { en: "Hello", hi: "नमस्ते" } as L,
     lookingFor: { en: "Looking for", hi: "ज़रूरत" } as L,
   },
+
+  about: {
+  title: {
+    en: "About Us",
+    hi: "हमारे बारे में",
+  },
+
+  sub: {
+    en: "We specialize in complete industrial plant development and execution, delivering end-to-end solutions from infrastructure planning and engineering to equipment installation, process piping, electrical and instrumentation work, plant integration, commissioning, and production readiness. With a focus on quality, safety, and reliable execution, we provide integrated solutions tailored to the specific requirements of every project.",
+    
+    hi: "हम संपूर्ण औद्योगिक प्लांट विकास एवं निष्पादन में विशेषज्ञता रखते हैं और इंफ्रास्ट्रक्चर प्लानिंग एवं इंजीनियरिंग से लेकर उपकरण इंस्टॉलेशन, प्रोसेस पाइपिंग, इलेक्ट्रिकल एवं इंस्ट्रूमेंटेशन कार्य, प्लांट इंटीग्रेशन, कमीशनिंग तथा उत्पादन हेतु तैयारी तक एंड-टू-एंड समाधान प्रदान करते हैं। गुणवत्ता, सुरक्षा और विश्वसनीय कार्य निष्पादन पर ध्यान केंद्रित करते हुए, हम प्रत्येक परियोजना की आवश्यकताओं के अनुसार एकीकृत समाधान प्रदान करते हैं।",
+  },
+},
   footer: {
     services: { en: "Services", hi: "सेवाएँ" } as L,
     pages: { en: "Pages", hi: "पेज" } as L,

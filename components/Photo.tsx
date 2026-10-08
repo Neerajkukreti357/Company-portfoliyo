@@ -9,7 +9,7 @@ export default function Photo({ src, alt, className = "", priority = false, size
   const [failed, setFailed] = useState(false);
   return (
     <div className="absolute inset-0 bg-gradient-to-br from-ink-2 to-teal">
-      {!failed && (
+      {!failed && src &&(
         <Image
           src={src}
           alt={alt}
