@@ -30,7 +30,7 @@ export const services: L[] = [
   { en: "Chemical storage tanks", hi: "केमिकल स्टोरेज टैंक" },
   { en: "Process plant setup", hi: "प्रोसेस प्लांट की स्थापना" },
   { en: "Piping and structural work", hi: "पाइपिंग और स्ट्रक्चरल कार्य" },
-  { en: "Effluent treatment plants", hi: "एफ्लुएंट ट्रीटमेंट प्लांट" },
+  { en: "Air Pollution Control Plant", hi: "वायु प्रदूषण नियंत्रण संयंत्र" },
   { en: "Fabrication and welding", hi: "फैब्रिकेशन और वेल्डिंग" },
   { en: "Maintenance and shutdown jobs", hi: "मेंटेनेंस और शटडाउन कार्य" },
 ];
