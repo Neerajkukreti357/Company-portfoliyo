@@ -12,9 +12,6 @@
 }
 
 html { scroll-behavior: smooth; }
-/* Saved language is Hindi: keep the page hidden until it has switched (auto-reveals after 1.5s as a safety net) */
-html.lang-pending body { opacity: 0; animation: reveal 0s linear 1.5s forwards; }
-@keyframes reveal { to { opacity: 1; } }
 body { background: var(--color-stainless); color: var(--color-ink); font-family: var(--font-public-sans), system-ui, sans-serif; }
 
 :focus-visible { outline: 3px solid var(--color-amber); outline-offset: 3px; }
