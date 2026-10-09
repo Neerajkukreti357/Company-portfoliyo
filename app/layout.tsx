@@ -16,17 +16,17 @@ export const metadata: Metadata = {
   description: site.tagline.en,
 
   openGraph: {
-    title: `${site.name}`,
+    title: `${site.name.en}`,
     description:
       "Discover our website and explore our services.",
     url: "https://company-portfoliyo.vercel.app/",
-    siteName: `${site.name}`,
+    siteName: `${site.name.en}`,
     images: [
       {
         url: "/opengraph-image.jpeg",
         width: 1200,
         height: 630,
-        alt: `${site.name}`,
+        alt: `${site.name.en}`,
       },
     ],
     type: "website",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: `${site.name}`,
+    title: `${site.name.en}`,
     description:
       "Discover our website and explore our services.",
     images: ["/opengraph-image.jpeg"],
@@ -44,6 +44,7 @@ export const metadata: Metadata = {
 const display = Big_Shoulders({ subsets: ["latin"], weight: ["600", "800"], variable: "--font-big-shoulders" });
 const sans = Public_Sans({ subsets: ["latin"], variable: "--font-public-sans" });
 const deva = Noto_Sans_Devanagari({ subsets: ["devanagari", "latin"], weight: ["400", "500", "600", "700"], variable: "--font-deva" });
+
 
 
 export default function RootLayout({ children }: { children: ReactNode }) {
