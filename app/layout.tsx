@@ -16,17 +16,17 @@ export const metadata: Metadata = {
   description: site.tagline.en,
 
   openGraph: {
-    title: `${site.name.en}`,
+    title: `FertiCraft FabTech`,
     description:
       "Discover our website and explore our services.",
     url: "https://company-portfoliyo.vercel.app/",
-    siteName: `${site.name.en}`,
+    siteName: `FertiCraft FabTech`,
     images: [
       {
         url: "/opengraph-image.jpeg",
         width: 1200,
         height: 630,
-        alt: `${site.name.en}`,
+        alt: `FertiCraft FabTech`,
       },
     ],
     type: "website",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: `${site.name.en}`,
+    title: `FertiCraft FabTech`,
     description:
       "Discover our website and explore our services.",
     images: ["/opengraph-image.jpeg"],
