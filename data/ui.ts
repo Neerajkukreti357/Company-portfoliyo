@@ -5,6 +5,7 @@ export const ui = {
   nav: {
     home: { en: "Home", hi: "होम" } as L,
     projects: { en: "Projects", hi: "प्रोजेक्ट" } as L,
+    gallery: { en: "Gallery", hi: "गैलरी" } as L,
     videos: { en: "Videos", hi: "वीडियो" } as L,
     contact: { en: "About Me", hi: "मेरे बारे में" } as L,
     quote: { en: "Get a quote", hi: "कोटेशन पाएँ" } as L,
@@ -95,8 +96,8 @@ export const ui = {
     } as L,
   },
 
-  gallery: {
-    title: {
+   gallery: {
+     title: {
       en: "My projects",
       hi: "मेरे प्रोजेक्ट",
     } as L,
@@ -107,6 +108,12 @@ export const ui = {
     } as L,
 
     all: { en: "All", hi: "सभी" } as L,
+    photosTitle: { en: "Photo gallery", hi: "फ़ोटो गैलरी" } as L,
+    photosSub: { en: "Tap a photo to view it full size.", hi: "फ़ोटो को बड़ा देखने के लिए उस पर टैप करें।" } as L,
+    open: { en: "Open photo:", hi: "फ़ोटो खोलें:" } as L,
+    close: { en: "Close", hi: "बंद करें" } as L,
+    prev: { en: "Previous photo", hi: "पिछली फ़ोटो" } as L,
+    next: { en: "Next photo", hi: "अगली फ़ोटो" } as L,
   },
 
   videosPage: {

@@ -14,7 +14,7 @@ export const site = {
     hi: "मैं केमिकल स्टोरेज टैंक और प्रोसेस प्लांट का डिज़ाइन, निर्माण और कमीशनिंग करता हूँ।",
   } as L,
   phone: "+91 96274209273",
-  whatsapp: "9196274209273", // country code + number, no + or spaces
+  whatsapp: "+919627420973", // country code + number, no + or spaces
   address: {
     en: "House No. 105, Prateet Nagar, Raiwala, Dehradun, 249205",
     hi: "हाउस नंबर 105, प्रतीत नगर, रायवाला, देहरादून, 249205",
@@ -276,4 +276,27 @@ export const reviews: Review[] = [
       hi: "उचित दाम और ईमानदार सलाह। मैं अपने ग्राहकों को बताता हूँ कि बजट में किन हिस्सों में सुरक्षित रूप से कटौती की जा सकती है, बजाय इसके कि उन्हें केवल अधिक चीज़ें बेचने की कोशिश करूँ।",
     },
   },
+];
+
+export type GalleryPhoto = { src: string; alt: L };
+
+
+export const galleryPhotos: GalleryPhoto[] = [
+  { src: "/gallery/1.jpeg", alt: { en: "Photo 1", hi: "फोटो 1" } },
+  { src: "/gallery/2.jpeg", alt: { en: "Photo 2", hi: "फोटो 2" } },
+  { src: "/gallery/3.jpeg", alt: { en: "Photo 3", hi: "फोटो 3" } },
+  { src: "/gallery/4.jpeg", alt: { en: "Photo 4", hi: "फोटो 4" } },
+  { src: "/gallery/5.jpeg", alt: { en: "Photo 5", hi: "फोटो 5" } },
+  { src: "/gallery/6.jpeg", alt: { en: "Photo 6", hi: "फोटो 6" } },
+  { src: "/gallery/7.jpeg", alt: { en: "Photo 7", hi: "फोटो 7" } },
+  { src: "/gallery/8.jpeg", alt: { en: "Photo 8", hi: "फोटो 8" } },
+  { src: "/gallery/9.jpeg", alt: { en: "Photo 9", hi: "फोटो 9" } },
+  { src: "/gallery/10.jpeg", alt: { en: "Photo 10", hi: "फोटो 10" } },
+  { src: "/gallery/11.jpeg", alt: { en: "Photo 11", hi: "फोटो 11" } },
+  { src: "/gallery/12.jpeg", alt: { en: "Photo 12", hi: "फोटो 12" } },
+  { src: "/gallery/13.jpeg", alt: { en: "Photo 13", hi: "फोटो 13" } },
+  { src: "/gallery/14.jpeg", alt: { en: "Photo 14", hi: "फोटो 14" } },
+  { src: "/gallery/15.jpeg", alt: { en: "Photo 15", hi: "फोटो 15" } },
+  { src: "/gallery/16.jpeg", alt: { en: "Photo 16", hi: "फोटो 16" } },
+  { src: "/gallery/17.jpeg", alt: { en: "Photo 17", hi: "फोटो 17" } },
 ];

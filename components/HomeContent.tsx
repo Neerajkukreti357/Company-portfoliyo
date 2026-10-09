@@ -3,9 +3,8 @@ import Link from "next/link";
 import Hero from "./Hero";
 import ProjectCard from "./ProjectCard";
 import VideoGrid from "./VideoGrid";
-import Reviews from "./Reviews";
 import { useLang } from "@/lib/i18n";
-import { projects } from "@/data/site";
+import { projects, site } from "@/data/site";
 import { ui } from "@/data/ui";
 
 export default function HomeContent() {
@@ -20,7 +19,7 @@ export default function HomeContent() {
             <h2 className="font-display text-5xl font-extrabold">{t(ui.home.builtTitle)}</h2>
             <p className="mt-2 max-w-xl text-slate">{t(ui.home.builtSub)}</p>
           </div>
-          <Link href="/gallery" className="rounded border-2 border-ink px-5 py-2.5 font-semibold hover:bg-ink hover:text-white">
+          <Link href="/project" className="rounded border-2 border-ink px-5 py-2.5 font-semibold hover:bg-ink hover:text-white">
             {t(ui.home.viewAll)}
           </Link>
         </div>
@@ -44,12 +43,14 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <Reviews />
+      {/* <Reviews /> */}
 
       <section className="mx-auto max-w-4xl px-5 py-20 text-center">
         <h2 className="font-display text-5xl font-extrabold">{t(ui.home.ctaTitle)}</h2>
         <p className="mx-auto mt-3 max-w-xl text-slate">{t(ui.home.ctaSub)}</p>
-        <Link href="/aboutUs" className="mt-7 inline-block rounded bg-amber px-8 py-3.5 font-semibold text-ink hover:brightness-110">
+        <Link
+        target="_blank"
+        href={`https://wa.me/${site.whatsapp}`} className="mt-7 inline-block rounded bg-amber px-8 py-3.5 font-semibold text-ink hover:brightness-110">
           {t(ui.home.talk)}
         </Link>
       </section>

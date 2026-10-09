@@ -14,11 +14,13 @@ import { site } from "@/data/site";
 import { ui } from "@/data/ui";
 import LangToggle from "./LangToggle";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaFacebookF } from "react-icons/fa";
+import Image from "next/image";
+import appImages from "@/constants/imageConstants";
 
 const links = [
   { href: "/", label: ui.nav.home },
-  { href: "/gallery", label: ui.nav.projects },
+  { href: "/project", label: ui.nav.projects },
+  { href: "/gallery", label: ui.nav.gallery },
   { href: "/videos", label: ui.nav.videos },
   { href: "/aboutUs", label: ui.nav.contact },
 ];
@@ -43,12 +45,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-30 border-b border-white/10 bg-ink/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-5">
+        <div className="flex gap-4 items-center">
+        <Image src={appImages.logo} width={70} height={70} alt="logo" className="rounded-full"/>
         <Link
           href="/"
           className="font-display text-lg font-extrabold tracking-wide text-white sm:text-2xl"
         >
           {t(site.name)}
         </Link>
+        </div>
 
         <nav className="hidden gap-8 md:flex" aria-label="Main">
           {links.map((l) => (
@@ -179,9 +184,9 @@ export default function Navbar() {
                   </p>
 
                   {/* WhatsApp + FaFacebookF */}
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 gap-3">
                     <a
-                      href="https://wa.me/911234567890"
+                      href={`https://wa.me/${site.whatsapp}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 rounded-xl bg-amber px-4 py-3.5 text-sm font-medium text-white transition hover:bg-white/15"
@@ -190,20 +195,12 @@ export default function Navbar() {
                       WhatsApp
                     </a>
 
-                    <a
-                      href="https://FaFacebookF.com/yourpage"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 rounded-xl bg-white/10 px-4 py-3.5 text-sm font-medium text-white transition hover:bg-white/15"
-                    >
-                      <FaFacebookF size={18} />
-                      Facebook
-                    </a>
+                   
                   </div>
 
                   {/* Phone */}
                   <a
-                    href="tel:+911234567890"
+                    href={`tel:${site.phone}`}
                     className="mt-3 flex items-center gap-3 rounded-xl border border-white/10 px-4 py-4 transition hover:bg-white/5"
                   >
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10">
@@ -216,7 +213,7 @@ export default function Navbar() {
                       </p>
 
                       <p className="mt-0.5 text-sm font-medium text-white">
-                        +91 12345 67890
+                        {site.phone}
                       </p>
                     </div>
                   </a>

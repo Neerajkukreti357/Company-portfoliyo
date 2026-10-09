@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Big_Shoulders, Public_Sans, Noto_Sans_Devanagari } from "next/font/google";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -8,15 +7,44 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { site } from "@/data/site";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://company-portfoliyo.vercel.app/"),
+
+  title: `${site.name.en} | Chemical plant and storage tank builders`,
+  description: site.tagline.en,
+
+  openGraph: {
+    title: `${site.name}`,
+    description:
+      "Discover our website and explore our services.",
+    url: "https://company-portfoliyo.vercel.app/",
+    siteName: `${site.name}`,
+    images: [
+      {
+        url: "/opengraph-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: `${site.name}`,
+      },
+    ],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name}`,
+    description:
+      "Discover our website and explore our services.",
+    images: ["/opengraph-image.jpeg"],
+  },
+};
 
 const display = Big_Shoulders({ subsets: ["latin"], weight: ["600", "800"], variable: "--font-big-shoulders" });
 const sans = Public_Sans({ subsets: ["latin"], variable: "--font-public-sans" });
 const deva = Noto_Sans_Devanagari({ subsets: ["devanagari", "latin"], weight: ["400", "500", "600", "700"], variable: "--font-deva" });
 
-export const metadata: Metadata = {
-  title: `${site.name.en} | Chemical plant and storage tank builders`,
-  description: site.tagline.en,
-};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

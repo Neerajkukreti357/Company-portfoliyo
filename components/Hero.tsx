@@ -51,7 +51,7 @@ export default function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
-              href="/gallery"
+              href="/project"
               className="rounded bg-amber px-6 py-3 font-semibold text-ink hover:brightness-110"
             >
               {t(ui.hero.seeProjects)}
