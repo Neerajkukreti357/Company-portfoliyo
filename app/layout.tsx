@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 
   title: `${site.name.en} | Chemical plant and storage tank builders`,
   description: site.tagline.en,
+  other: { google: "notranslate" },
 
   openGraph: {
     title: `FertiCraft FabTech`,
@@ -49,7 +50,7 @@ const deva = Noto_Sans_Devanagari({ subsets: ["devanagari", "latin"], weight: ["
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${sans.variable} ${deva.variable}`}>
+    <html lang="en" translate="no" suppressHydrationWarning className={`${display.variable} ${sans.variable} ${deva.variable}`}>
       <body>
         <LanguageProvider>
           <Navbar />

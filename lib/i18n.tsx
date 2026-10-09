@@ -24,9 +24,15 @@ const getServerSnapshot = (): Lang => "en";
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const lang = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
+  
+
   useEffect(() => {
+  // Only reveal the page once the saved language has been applied (prevents the English flash)
+  if (lang === getSnapshot()) {
     document.documentElement.lang = lang;
-  }, [lang]);
+    document.documentElement.classList.remove("lang-pending");
+  }
+}, [lang]);
 
   const setLang = useCallback((l: Lang) => {
     try {
