@@ -11,6 +11,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://company-portfoliyo.vercel.app/"),
+  verification: {
+    google: "jAifXTvHTADzLSjsFmEt1rz8xgR0uM0h1s-jLvP8iKw",
+  },
 
   title: `${site.name.en} | Chemical plant and storage tank builders`,
   description: site.tagline.en,

@@ -20,8 +20,8 @@ export const site = {
     hi: "हाउस नंबर 105, प्रतीत नगर, रायवाला, देहरादून, 249205",
   } as L,
   hours: {
-    en: "Mon to Sat, 9:00 am to 6:00 pm",
-    hi: "सोमवार से शनिवार, सुबह 9:00 से शाम 6:00 बजे तक",
+    en: "Mon to Sat",
+    hi: "सोमवार से शनिवार",
   } as L,
   yearsExperience: 8,
 };
