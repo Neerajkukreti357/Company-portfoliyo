@@ -10,27 +10,28 @@ import { site } from "@/data/site";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://company-portfoliyo.vercel.app/"),
+  metadataBase: new URL("https://company-portfoliyo.vercel.app"),
   verification: {
     google: "jAifXTvHTADzLSjsFmEt1rz8xgR0uM0h1s-jLvP8iKw",
   },
 
   title: `${site.name.en} | Chemical plant and storage tank builders`,
   description: site.tagline.en,
+  applicationName: "FertiCraft FabTech",
   other: { google: "notranslate" },
 
   openGraph: {
-    title: `FertiCraft FabTech`,
+    title: "FertiCraft FabTech",
     description:
-      "Discover our website and explore our services.",
-    url: "https://company-portfoliyo.vercel.app/",
-    siteName: `FertiCraft FabTech`,
+      "Chemical plant and storage tank design, fabrication and commissioning in Ludhiana, Punjab.",
+    url: "/",
+    siteName: "FertiCraft FabTech",
     images: [
       {
         url: "/opengraph-image.jpeg",
         width: 1200,
         height: 630,
-        alt: `FertiCraft FabTech`,
+        alt: "FertiCraft FabTech",
       },
     ],
     type: "website",
@@ -38,9 +39,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: `FertiCraft FabTech`,
+    title: "FertiCraft FabTech",
     description:
-      "Discover our website and explore our services.",
+      "Chemical plant and storage tank design, fabrication and commissioning in Ludhiana, Punjab.",
     images: ["/opengraph-image.jpeg"],
   },
 };
@@ -49,12 +50,22 @@ const display = Big_Shoulders({ subsets: ["latin"], weight: ["600", "800"], vari
 const sans = Public_Sans({ subsets: ["latin"], variable: "--font-public-sans" });
 const deva = Noto_Sans_Devanagari({ subsets: ["devanagari", "latin"], weight: ["400", "500", "600", "700"], variable: "--font-deva" });
 
-
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "FertiCraft FabTech",
+  alternateName: "FertiCraft",
+  url: "https://company-portfoliyo.vercel.app/",
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" translate="no" suppressHydrationWarning className={`${display.variable} ${sans.variable} ${deva.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <LanguageProvider>
           <Navbar />
           <main>{children}</main>
